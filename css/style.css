@@ -81,6 +81,27 @@ p{
     font-weight: 400;
 }
 
+span.bold{
+    font-weight: 700;
+}
+
+ul.list_number{
+
+}
+
+
+ul.list_number ~ ul.list_number{
+    margin-top: 0.77em;
+}
+
+ul.list_number li{
+    list-style-type: decimal;
+    list-style-position: outside;
+    margin-left: 1.1em;
+    margin-bottom: 0.5em;
+}
+
+
 a.btn,.btn{
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -700,6 +721,11 @@ section{
 }
 
 
+.section_users .row_content-user ~ .row_content-user{
+    margin: 7%  0 0 0;
+}
+
+
 
 .item_quote{
     position: relative;
@@ -746,6 +772,12 @@ section{
     border-radius: 0.769rem;
 }
 
+.item_whitebg ~ .item_whitebg{
+    margin-top: 0.77em;
+}
+
+
+
 .item_whitebg .row{
     align-items: stretch;
 }
@@ -756,7 +788,7 @@ section{
 }
 
 
-.item_whitebg li::before{
+.item_whitebg ul.list li::before{
     content: "";
     display: block;
     width: 0.46rem;
@@ -766,7 +798,7 @@ section{
     border-radius: 100%;
 }
 
-.item_whitebg li{
+.item_whitebg ul.list li{
     display: flex;
     display: -ms-flexbox;
     align-items: flex-start;
@@ -829,6 +861,38 @@ section{
     border-radius: 100px;
     background: #fff;
     box-shadow: 0 0 14px rgba(0,0,0,0.25);
+}
+
+.page .section_info .item_video{
+    width: 100%;
+}
+
+.page .section_info .video{
+    padding: 5.714% 7.5%;
+    background: #333;
+}
+
+.page .section_info .video .inside{
+    width: 100%;
+    position: relative;
+}
+
+.page .section_info .video .inside::before{
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.page .section_info .video iframe{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
 }
 
 @media screen and (max-width:767px) {
@@ -1161,7 +1225,7 @@ section{
         margin-bottom: 0.83em;
     }
 
-    .item_whitebg li ~ li{
+    .item_whitebg ul.list li ~ li{
         margin-top: 0.83em;
     }
 
@@ -1507,7 +1571,7 @@ section{
         margin: auto 1.538rem;
     }
     .page .section_info{
-        background-position: top center , center center;
+        background-position: top center , center 64%;
     }
 
     .page .content_two{
@@ -1518,28 +1582,6 @@ section{
     .page .section_info .pic{
         border-radius: 0.769rem;
         overflow: hidden;
-    }
-
-    .page .section_info .video{
-        position: relative;
-    }
-
-    .page .section_info .video::before{
-        content: "";
-        display: block;
-        width: 100%;
-        padding-bottom: 56.25%;
-    }
-
-    .page .section_info .video iframe{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        margin: auto;
     }
 
     .section_users{
@@ -1571,7 +1613,7 @@ section{
         margin-bottom: 1.2rem;
     }
 
-    .item_whitebg li ~ li{
+    .item_whitebg ul.list li ~ li{
         margin-top: 1.2rem;
     }
 
